@@ -4,8 +4,8 @@
 Este microservicio es responsable de la gestión y persistencia de la información de los clientes. Forma parte de un ecosistema de microservicios y actúa como el servidor de recursos para los datos de identidad de los usuarios.
 
 ## Tecnologías y Dependencias
-* **Java 17+**
-* **Spring Boot 3.x**
+* **Java 25**
+* **Spring Boot 4.0.6**
 * **Spring Data JPA:** Para la persistencia de datos en base de datos relacional.
 * **MySQL Driver:** Conector para la base de datos MySQL.
 * **Lombok:** Para reducir el código repetitivo (Boilerplate) mediante anotaciones.
