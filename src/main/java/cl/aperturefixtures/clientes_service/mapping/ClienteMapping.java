@@ -6,8 +6,10 @@ import cl.aperturefixtures.clientes_service.dto.RequestClienteDTO;
 import cl.aperturefixtures.clientes_service.entity.Cliente;
 
 import org.jspecify.annotations.NonNull;
+import org.springframework.stereotype.Component;
 
 
+@Component
 public class ClienteMapping {
 
     public static @NonNull ResponseClienteDTO toDTO(@NonNull Cliente entity) {
