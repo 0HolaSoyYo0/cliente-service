@@ -4,7 +4,6 @@ package cl.aperturefixtures.clientes_service.controller;
 import cl.aperturefixtures.clientes_service.dto.ResponseClienteDTO;
 import cl.aperturefixtures.clientes_service.service.ClienteService;
 import cl.aperturefixtures.clientes_service.dto.RequestClienteDTO;
-import cl.aperturefixtures.clientes_service.entity.Cliente;
 
 import jakarta.validation.Valid;
 
@@ -23,6 +22,8 @@ public class ClienteController {
     @Autowired
     ClienteService clienteService;
 
+//  Todos los endpoints tendrán su propia dirección por temas de claridad y seguridad.
+
     @PostMapping("/ingreso")
     public ResponseEntity<RequestClienteDTO> save(@Valid @RequestBody RequestClienteDTO dto) {
         clienteService.save(dto);
@@ -30,7 +31,7 @@ public class ClienteController {
     }
 
     @GetMapping("/vista")
-    public ResponseEntity<List<Cliente>> findAll() {
+    public ResponseEntity<List<ResponseClienteDTO>> findAll() {
         return ResponseEntity.status(HttpStatus.OK).body(clienteService.findAll());
     }
 

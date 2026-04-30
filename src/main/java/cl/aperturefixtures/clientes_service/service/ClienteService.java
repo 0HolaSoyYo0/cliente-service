@@ -31,8 +31,8 @@ public class ClienteService {
         clienteRepository.save(ClienteMapping.toEntity(dto));
     }
 
-    public List<Cliente> findAll() {
-        return clienteRepository.findAll();
+    public List<ResponseClienteDTO> findAll() {
+        return ClienteMapping.allResponseDTO(clienteRepository.findAll());
     }
 
     public ResponseClienteDTO findByCorreo(String correo) {
@@ -40,9 +40,7 @@ public class ClienteService {
         if (cliente.isEmpty()) {
             throw new ClienteNoEncontradoException("No se encontró Cliente con el correo ingresado.");
         }
-        return ClienteMapping.toDTO(cliente.get());
+        return ClienteMapping.toResponseDTO(cliente.get());
     }
-
-
 
 }
