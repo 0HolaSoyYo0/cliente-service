@@ -12,7 +12,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "clientes", schema = "clientes-test")
+@Table(name = "clientes", schema = "clientes_test")
 public class Cliente {
 
     @Id
